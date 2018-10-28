@@ -40,6 +40,7 @@ module.exports = {
       'common': path.resolve(__dirname, '../src/common'),
       'store': path.resolve(__dirname, '../src/store'),
       'components': path.resolve(__dirname, '../src/components'),
+      'base': path.resolve(__dirname, '../src/base'),
     }
   },
   module: {
