@@ -1,5 +1,6 @@
 import jsonp from 'common/js/jsonp'
 import {commonParams, options} from './config'
+import axios from 'axios'
 
 export function getRecommend() {
   const url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
@@ -10,4 +11,11 @@ export function getRecommend() {
     needNewCode: 1
   })
   return jsonp(url, data, options)
+}
+
+export function getDiscList() {
+  return axios.get('http://localhost:8080/static/data/recom.json', {})
+    .then((res) => {
+      return Promise.resolve(res.data)
+    })
 }
